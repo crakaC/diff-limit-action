@@ -1,0 +1,13 @@
+name: On pull request
+on:
+  pull_request:
+
+jobs:
+  limit-changes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/limit
+        with:
+          limit: 100
+          extension: kt|java
+          exclude_dir: app/src/test
