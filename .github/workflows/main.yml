@@ -1,4 +1,4 @@
-name: On pull request
+name: Check Diffs
 on:
   pull_request:
 

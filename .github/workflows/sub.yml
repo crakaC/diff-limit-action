@@ -1,0 +1,13 @@
+name: Sub
+
+on:
+  workflow_run:
+    workflows: [ Check Diffs ]
+    types:
+      - completed
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "After main"
+        run: echo Run!
